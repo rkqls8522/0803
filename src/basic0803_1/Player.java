@@ -4,8 +4,8 @@ public class Player {
 
 //	PairOfDice dice = new PairOfDice();
 	
-	String name;
-	int total;
+	private String name;
+	private int total;
 	
 	String getName() {return name;}
 	void setName(String name) {this.name=name;}

@@ -1,21 +1,25 @@
 package basic0803_1;
 
+import java.util.Scanner;
+
 public class Driver {
 
-	public static void main(String[] args) {
+	private String flag;
 
-		String flag = "¿¹";
-		PairOfDice dice = new PairOfDice();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	String getFlag() {
+		return this.flag;
 	}
-	
+
+	void setFlag(String flag) {
+		this.flag = flag;
+	}
+
+	Scanner sc = new Scanner(System.in);
+
+	String answer() {
+		String ans = sc.next();
+		setFlag(ans);
+		return flag;
+	}
+
 }

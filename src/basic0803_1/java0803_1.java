@@ -16,7 +16,6 @@ public class java0803_1 {
 //		test.withdraw(5000);
 //		System.out.println(test);
 
-		
 //		Student[] student = new Student[2];
 //		
 //		student[0] = new Student();
@@ -30,7 +29,7 @@ public class java0803_1 {
 //		student[1].setAssingmentScore(86);
 //		student[1].setExamScore(95);
 //		System.out.println(student[1]);
-	
+
 //		PairOfDice dice = new PairOfDice();
 //		int result;
 //		for(int i = 0; i <10; i++) {
@@ -39,25 +38,28 @@ public class java0803_1 {
 //			System.out.println(result);
 //			
 //		}
-		
+
 		Player player1 = new Player("가빈");
 		Player player2 = new Player("밍다");
 		Driver driver = new Driver();
 		do {
-			System.out.println(player1.getName()+"이 주사위를 던집니다.");
+			System.out.println("------------------------");
+			System.out.println(player1.getName() + "이 주사위를 던집니다.");
 			player1.roll(new PairOfDice());
-			System.out.println(player2.getName()+"이 주사위를 던집니다.");
-			player1.roll(new PairOfDice());
-			if(player1.getTotal() > player2.getTotal())
+			System.out.println();
+			System.out.println(player2.getName() + "이 주사위를 던집니다.");
+			player2.roll(new PairOfDice());
+			System.out.println();
+			if (player1.getTotal() > player2.getTotal())
 				System.out.println(player1.getName() + "이 이겼습니다.");
-			else if(player1.getTotal() < player2.getTotal())
+			else if (player2.getTotal() > player1.getTotal())
 				System.out.println(player2.getName() + "이 이겼습니다.");
-			else System.out.println("동점입니다.");
-			
-			System.out.println("계속 하시겠습니까?");
-		}while(sc.next())
-			
-		
+			else
+				System.out.println("동점입니다.");
+
+			System.out.println("\n계속 하시겠습니까? \n계속하시려면 y를 입력하세요.");
+		} while (driver.answer().equals("y"));
+
 	}
 
 }
